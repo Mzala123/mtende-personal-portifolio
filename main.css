@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url(poppins/Poppins-Regular.otf);
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+    src: url(Syne/Syne-VariableFont_wght.ttf); 
+}
+
+html {
+    font-family: 'myFont', 'Syne';
+}
+
+body{
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #fdfbf5;
+    color: #191919;
+}
+
+.page_wrapper{
+     border: 1px solid #191919;
+     position: relative;
+     height: 100vh;
+     /* padding-left: 40px;
+     padding-right: 40px; */
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 36px;
+    margin-right: 36px;
+    height: 9vh;
+    background-color: white;
+    align-items: center;
+    border-bottom: 1px solid #191919;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header div:nth-of-type(1) a, header div:nth-of-type(2) a{
+     color: #191919;
+     text-transform: uppercase;
+     text-decoration: none;
+}
+
+ header div:nth-of-type(1){
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header div:nth-of-type(1) a{
+    font-size: 30px;
+}
+
+header div:nth-of-type(1) span{
+    font-weight: 200;
+    font-size: 36px;
+}
+
+header div:nth-of-type(1) span:hover{
+    cursor: pointer;
+}
+
+header div:nth-of-type(2) a{
+    border-bottom: #191919 solid 1px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    letter-spacing: 1px;
+}
+
+header div:nth-of-type(2) a:last-of-type{
+    border-bottom: none;
+}
+
+/* Mobile view menu */
+
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fdfbf5;
+    top: 9vh;
+    height: 280px;
+    width: 100%;
+    grid-column-gap: 0.75rem;
+    padding: 20px;
+    border: 1px solid #191919; 
+    margin-top: -1px;
+    transform: translateY(200vh);
+    opacity: 0;
+    transition: all 0s;
+} 
+
+@keyframes menu-open-anime {
+    0% {
+        transform: translateY(200vh);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }    
+}
+
+.menu_open{
+    animation: menu-open-anime 0.3s ease-in;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes menu-close-anime {
+   
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(200vh);
+        opacity: 0;
+    }    
+}
+
+.menu_close{
+    
+    opacity: 0;
+    transform: translateY(200vh);
+}
+.animation {
+    animation: menu-close-anime 0.3s ease-out;
+}
+
+/* End of mobile view menu */
+
+main{
+    position: relative;
+    top: 12vh;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+
+/* @media screen and (min-width:576px) {
+      
+         
+}
+
+
+@media screen and (min-width:640px) {
+    
+    
+} */
+
+
+@media screen and (min-width:768px) {
+
+
+}
+
+@media screen and (min-width:1024px) {
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+
+}
