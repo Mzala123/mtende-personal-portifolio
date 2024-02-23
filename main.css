@@ -23,25 +23,28 @@ body{
 }
 
 .page_wrapper{
-     border: 1px solid #191919;
+     /* border: 1px solid #191919; */
      position: relative;
-     height: 100vh;
+     height: 100%;
      /* padding-left: 40px;
      padding-right: 40px; */
 }
 
+
+/* changed by adding top 0 */
 header{
     display: flex;
     justify-content: space-between;
-    margin-left: 36px;
-    margin-right: 36px;
+    margin-left: 40px;
+    margin-right: 40px;
     height: 9vh;
     background-color: #fdfbf5;
     align-items: center;
     border-bottom: 1px solid #191919;
     position: fixed;
-    right: 0;
-    left: 0;
+    right: 12px;
+    left: 12px;
+    top: 0;
     z-index: 10;
 }
 
@@ -55,8 +58,8 @@ header div:nth-child(1) a, header div:nth-child(2) a{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
 }
 
 header div:nth-child(1) a{
@@ -84,6 +87,7 @@ header div:nth-child(2) a:last-of-type{
 }
 
 /* Mobile view menu */
+
 .main-menu{
     display: flex;
     flex-direction: column;
@@ -149,15 +153,109 @@ header div:nth-child(2) a:last-of-type{
 
 /* End of mobile view menu */
 
-main{
-    position: relative;
-    top: 12vh;
-    margin-left: 36px;
-    margin-right: 36px;
+@font-face {
+    font-family: "poppins";
+    src: url(poppins/Poppins-Regular.otf);
+
+}
+
+@font-face {
+    font-family: "montSerrat";
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 
-/* @media screen and (min-width:576px) {
+@font-face {
+    font-family: "satoshiFont";
+    /* src: url(poppins/Poppins-Regular.otf); */
+    src: url(Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf);
+
+}
+
+main{
+    position: relative;
+    top: 8vh;
+    margin-left: 39px;
+    margin-right: 39px;
+    font-family: "satoshiFont";
+    font-weight: 200;
+    color: #191919;
+    /* border: #191919 solid; */
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-bottom: 1px solid #191919;
+    gap: 30px;
+    padding: 80px 0 80px;
+    /* overflow: scroll; */
+}
+
+
+.intro div:nth-child(1){
+    font-family: "satoshiFont";
+    flex: 1;
+}
+
+
+.intro div:nth-child(1) >div{
+   margin-bottom: 25px;
+   font-family: "montSerrat";
+}
+
+.intro div:nth-child(1) >div p:first-child{
+    font-weight: 100;
+    font-size: 40px;
+    margin-bottom: 4px;
+    text-align: center;
+
+}
+
+.intro div:nth-child(1) >div p:first-child span{
+    font-weight: 500;
+}
+
+.intro div:nth-child(1) >div p:last-child{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.intro div:nth-child(1) >div p{
+    font-weight: 400;
+}
+
+
+.intro div:nth-child(1) p{
+     font-size: 18px; 
+     text-align: center;
+}
+
+.intro div:nth-child(1) p:first-of-type{
+    margin-bottom: 10px;
+
+}
+
+
+
+.intro div:nth-child(2){
+      flex: 1;
+}
+
+.intro div:nth-child(2) img{
+
+    border-radius: 16px;
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+
+@media screen and (min-width:576px) {
       
          
 }
@@ -166,30 +264,14 @@ main{
 @media screen and (min-width:640px) {
     
     
-} */
+    
+}
 
 
 @media screen and (min-width:768px) {
 
-            /* .main-menu{
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                background-color: #fdfbf5;
-                top: 9vh;
-                height: 280px;
-                width: 100%;
-                grid-column-gap: 0.75rem;
-                padding: 20px;
-                border: 1px solid #191919; 
-                margin-top: -1px;
-                transform: translateY(200vh);
-                opacity: 0;
-                transition: all 0s;
-            } */
-
             .main-menu{
-                display: flex;
+                display: flex !important;
                 flex-direction: row;
                 position: relative;
                 background-color: #fdfbf5;
@@ -200,8 +282,8 @@ main{
                 padding: 20px;
                 border: none; 
                 margin-top: 0;
-                transform: translateY(200vh);
-                opacity: 0;
+                transform: translateY(0) !important;
+                opacity: 1 !important;
                 transition: all 0s;
             }
 
@@ -213,7 +295,7 @@ main{
 
 
             .menu_close{
-                opacity: 0;
+                opacity: 1;
                 transform: translateY(200vh);
             }
 
@@ -224,9 +306,64 @@ main{
                 letter-spacing: 1px;
             }
 
+            header div:nth-child(2) a:hover{
+               border-bottom: 1.5px solid #191919;
+            }
+
             #open_toggle{
                 display: none;
             }
+
+
+            .intro {
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                gap: 3rem;
+                /* overflow: scroll; */
+            }
+
+
+            .intro div:nth-child(1) >div p:first-child{
+                font-size: 80px;
+                line-height: 1;
+                letter-spacing: 0;
+                text-align: left;
+            }
+            
+            .intro div:nth-child(1) >div p:first-child span{
+                /* font-weight: 500; */
+            }
+            
+            .intro div:nth-child(1) >div p:last-child{
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+            
+            
+            .intro div:nth-child(1) >div p{
+                font-weight: 400;
+            }
+            
+            
+            .intro div:nth-child(1) p{
+                 font-size: 24px;
+                 line-height: 1.5; 
+                 text-align: left;
+            }
+            
+            .intro div:nth-child(1) p:first-of-type{
+                margin-bottom: 15px;
+            
+            }
+            
+
+            .intro div:nth-child(2) img{
+              
+                height: 100%;
+            }
+            
 
 
 }
