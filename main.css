@@ -36,7 +36,7 @@ header{
     margin-left: 36px;
     margin-right: 36px;
     height: 9vh;
-    background-color: white;
+    background-color: #fdfbf5;
     align-items: center;
     border-bottom: 1px solid #191919;
     position: fixed;
@@ -45,13 +45,13 @@ header{
     z-index: 10;
 }
 
-header div:nth-of-type(1) a, header div:nth-of-type(2) a{
+header div:nth-child(1) a, header div:nth-child(2) a{
      color: #191919;
      text-transform: uppercase;
      text-decoration: none;
 }
 
- header div:nth-of-type(1){
+ header div:nth-child(1){
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -59,32 +59,31 @@ header div:nth-of-type(1) a, header div:nth-of-type(2) a{
     padding-right: 10px;
 }
 
-header div:nth-of-type(1) a{
+header div:nth-child(1) a{
     font-size: 30px;
 }
 
-header div:nth-of-type(1) span{
+header div:nth-child(1) span{
     font-weight: 200;
     font-size: 36px;
 }
 
-header div:nth-of-type(1) span:hover{
+header div:nth-child(1) span:hover{
     cursor: pointer;
 }
 
-header div:nth-of-type(2) a{
+header div:nth-child(2) a{
     border-bottom: #191919 solid 1px;
     padding-bottom: 1rem;
     padding-top: 1rem;
     letter-spacing: 1px;
 }
 
-header div:nth-of-type(2) a:last-of-type{
+header div:nth-child(2) a:last-of-type{
     border-bottom: none;
 }
 
 /* Mobile view menu */
-
 .main-menu{
     display: flex;
     flex-direction: column;
@@ -171,6 +170,63 @@ main{
 
 
 @media screen and (min-width:768px) {
+
+            /* .main-menu{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                background-color: #fdfbf5;
+                top: 9vh;
+                height: 280px;
+                width: 100%;
+                grid-column-gap: 0.75rem;
+                padding: 20px;
+                border: 1px solid #191919; 
+                margin-top: -1px;
+                transform: translateY(200vh);
+                opacity: 0;
+                transition: all 0s;
+            } */
+
+            .main-menu{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                background-color: #fdfbf5;
+                top: 0;
+                height: auto;
+                width: auto;
+                gap: 30px;
+                padding: 20px;
+                border: none; 
+                margin-top: 0;
+                transform: translateY(200vh);
+                opacity: 0;
+                transition: all 0s;
+            }
+
+            .menu_open{
+                animation: menu-open-anime 0.3s ease-in;
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+
+            .menu_close{
+                opacity: 0;
+                transform: translateY(200vh);
+            }
+
+            header div:nth-child(2) a{
+                border-bottom: none;
+                padding-bottom: 0;
+                padding-top: 0;
+                letter-spacing: 1px;
+            }
+
+            #open_toggle{
+                display: none;
+            }
 
 
 }
