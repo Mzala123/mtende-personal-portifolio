@@ -15,17 +15,15 @@ html {
 }
 
 body{
-    padding-top: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
     background-color: #fdfbf5;
     color: #191919;
 }
 
 .page_wrapper{
      /* border: 1px solid #191919; */
-     position: relative;
-     height: 100%;
+     position: absolute;
+     height: 100vh;
+     z-index: 100;
      /* padding-left: 40px;
      padding-right: 40px; */
 }
@@ -37,13 +35,13 @@ header{
     justify-content: space-between;
     margin-left: 40px;
     margin-right: 40px;
-    height: 9vh;
+    height: 10vh;
     background-color: #fdfbf5;
     align-items: center;
     border-bottom: 1px solid #191919;
     position: fixed;
-    right: 12px;
-    left: 12px;
+    right: 0;
+    left: 0;
     top: 0;
     z-index: 10;
 }
@@ -93,7 +91,7 @@ header div:nth-child(2) a:last-of-type{
     flex-direction: column;
     position: absolute;
     background-color: #fdfbf5;
-    top: 9vh;
+    top: 10vh;
     height: 280px;
     width: 100%;
     grid-column-gap: 0.75rem;
@@ -174,13 +172,12 @@ header div:nth-child(2) a:last-of-type{
 
 main{
     position: relative;
-    top: 8vh;
-    margin-left: 39px;
-    margin-right: 39px;
+    top: 10vh;
+    margin-left: 40px;
+    margin-right: 40px;
     font-family: "satoshiFont";
     font-weight: 200;
     color: #191919;
-    /* border: #191919 solid; */
 }
 
 
@@ -190,7 +187,7 @@ main{
     height: auto;
     border-bottom: 1px solid #191919;
     gap: 30px;
-    padding: 80px 0 80px;
+    padding: 40px 0 40px;
     /* overflow: scroll; */
 }
 
@@ -210,18 +207,20 @@ main{
     font-weight: 100;
     font-size: 40px;
     margin-bottom: 4px;
-    text-align: center;
+    text-align: left;
 
 }
 
 .intro div:nth-child(1) >div p:first-child span{
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .intro div:nth-child(1) >div p:last-child{
     font-size: 20px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 
 
@@ -232,12 +231,11 @@ main{
 
 .intro div:nth-child(1) p{
      font-size: 18px; 
-     text-align: center;
+     text-align: left;
 }
 
 .intro div:nth-child(1) p:first-of-type{
     margin-bottom: 10px;
-
 }
 
 
@@ -247,12 +245,48 @@ main{
 }
 
 .intro div:nth-child(2) img{
-
     border-radius: 16px;
     object-fit: cover;
-    width: 100%;
-    
+    width: 100%;    
 }
+
+
+
+
+.qualification{
+  padding: 40px 0 40px 0;
+  border-bottom: 1px solid #191919;
+}
+
+.qualification div:nth-child(1){
+    text-transform: uppercase;
+    font-family: "myFont";
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 0;
+    font-weight: 100;
+}
+
+.qualification div:nth-child(2) span{
+    font-size: 80px;
+    font-weight: 100;
+    align-self: flex-start;
+    margin-left: -13px;
+    padding: 0;
+}
+
+.qualification div:nth-child(2) div > p:first-of-type{
+    font-family: "myFont";
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.qualification div:nth-child(2) div > p:last-of-type{
+    line-height: 1.5;
+}
+
 
 
 @media screen and (min-width:576px) {
@@ -262,8 +296,23 @@ main{
 
 
 @media screen and (min-width:640px) {
+
     
-    
+    .intro div:nth-child(2) p{
+        font-size: 20px;
+        line-height: 1.5; 
+        text-align: left;
+   }
+
+
+   .qualification div:nth-child(2){
+    display: flex;
+    column-gap: 40px;
+   }
+
+   .qualification div:nth-child(2) > div:nth-child(2){
+     flex-direction: column;
+   }
     
 }
 
@@ -316,10 +365,8 @@ main{
 
 
             .intro {
-                display: flex;
                 flex-direction: row;
-                height: auto;
-                gap: 3rem;
+                padding: 60px 0 60px;
                 /* overflow: scroll; */
             }
 
@@ -339,6 +386,10 @@ main{
                 font-size: 30px;
                 text-transform: uppercase;
                 text-align: left;
+                letter-spacing: 5px;
+                /* color: #fdfbf5;
+                background-color: #191919; */
+             
             }
             
             
@@ -348,7 +399,7 @@ main{
             
             
             .intro div:nth-child(1) p{
-                 font-size: 24px;
+                 font-size: 20px;
                  line-height: 1.5; 
                  text-align: left;
             }
@@ -370,10 +421,20 @@ main{
 
 @media screen and (min-width:1024px) {
 
+   
+       
 
 }
 
 @media screen and (min-width:1200px) {
+    
+    .intro {
+        padding: 80px 0 80px;
+        /* overflow: scroll; */
+    }
 
-
+    .intro div:nth-child(1) p{
+        font-size: 24px;
+   }
+   
 }
