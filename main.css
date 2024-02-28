@@ -201,12 +201,14 @@ main{
 .intro div:nth-child(1) >div{
    margin-bottom: 25px;
    font-family: "montSerrat";
+   padding: 0;
 }
 
 .intro div:nth-child(1) >div p:first-child{
     font-weight: 100;
     font-size: 40px;
     margin-bottom: 4px;
+    color: #191919;
     text-align: left;
 
 }
@@ -219,7 +221,7 @@ main{
     font-size: 20px;
     text-transform: uppercase;
     text-align: left;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-weight: 300;
 }
 
@@ -250,47 +252,109 @@ main{
     width: 100%;    
 }
 
-
-
-
 .qualification{
-  padding: 40px 0 40px 0;
-  border-bottom: 1px solid #191919;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0 40px;
+    border-bottom: 1px solid #191919;
 }
 
-.qualification div:nth-child(1){
+.qualification > div:nth-child(1){
+    font-size: 16px;
     text-transform: uppercase;
-    font-family: "myFont";
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: flex;
-    padding: 0;
-    font-weight: 100;
+    font-family: "Montserrat";
+    font-weight: 300;
 }
 
-.qualification div:nth-child(2) span{
-    font-size: 80px;
-    font-weight: 100;
-    align-self: flex-start;
-    margin-left: -13px;
-    padding: 0;
+.qualification > div:nth-child(2){
+     display: grid;
 }
 
-.qualification div:nth-child(2) div > p:first-of-type{
-    font-family: "myFont";
+.qualification > div:nth-child(2) >div:nth-child(1){
+    /* padding: 0;
+    margin: 0; */
+    /* background-color: aqua; */
+}
+.qualification > div:nth-child(2) >div:nth-child(1) span{
+    font-size: 80px; 
+    font-weight: lighter;
+    margin-left: -14px;
+}
+
+.qualification > div:nth-child(2) >div:nth-child(2) p:first-of-type{
+    font-family: 'myFont';
+    text-transform: uppercase;
     font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* .qualification > div:nth-child(2) >div:nth-child(2) p:last-of-type{
+    font-size: 15px;
+} */
+
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0 40px;
+    /* border-bottom: 1px solid #191919; */
+}
+
+.services > div:nth-child(1){
+    font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.qualification div:nth-child(2) div > p:last-of-type{
-    line-height: 1.5;
+    font-family: "Montserrat";
+    font-weight: 300;
 }
 
 
+.services_list {
+    display: grid;
+    gap: 40px;
+}
 
-@media screen and (min-width:576px) {
+.services_list .list{
+    display: grid;
+    border-bottom: 1px solid #191919;
+    padding-bottom: 40px;
+}
+
+.services_list .list > div:nth-child(1) span{
+    font-size: 80px;
+    margin-left: -14px;
+    font-weight: lighter;
+}
+
+.services_list .list > div:nth-child(2) p:first-of-type{
+    font-family: 'myFont';
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+
+
+
+@media screen and (min-width:500px) {
       
+    .qualification > div:nth-child(2){
+        /* display: flex;
+        flex-direction: row;    
+        justify-content: space-between;
+        gap: 25px; */
+        grid-template-columns: 1fr 4fr;
+   }
+
+
+   
+   .services_list .list{
+      grid-template-columns: 1fr 4fr;
+   }  
+
+
+
          
 }
 
@@ -304,15 +368,6 @@ main{
         text-align: left;
    }
 
-
-   .qualification div:nth-child(2){
-    display: flex;
-    column-gap: 40px;
-   }
-
-   .qualification div:nth-child(2) > div:nth-child(2){
-     flex-direction: column;
-   }
     
 }
 
@@ -328,7 +383,7 @@ main{
                 height: auto;
                 width: auto;
                 gap: 30px;
-                padding: 20px;
+                padding: 20px 0 20px 20px;
                 border: none; 
                 margin-top: 0;
                 transform: translateY(0) !important;
@@ -386,9 +441,7 @@ main{
                 font-size: 30px;
                 text-transform: uppercase;
                 text-align: left;
-                letter-spacing: 5px;
-                /* color: #fdfbf5;
-                background-color: #191919; */
+                font-weight: 300;
              
             }
             
@@ -416,25 +469,123 @@ main{
             }
             
 
+            .qualification{
+                grid-template-columns: 2fr 4fr;
+                padding: 60px 0 60px;
+                gap: 20px;
+            }
 
+            .qualification > div:nth-child(1){
+               border-right: 1px solid black;
+            }
+
+            .qualification > div:nth-child(2) >div:nth-child(2) p:last-of-type{
+                font-size: 18px;
+            }
+
+            .qualify{
+                gap: 20px;
+            }
+
+            .qualify >div:nth-child(1){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .qualification > div:nth-child(2){
+                /* display: grid; */
+                /* grid-template-columns: 1fr 5fr; */
+           }
+
+        
+
+            .services{
+                grid-template-columns: 2fr 4fr;
+                padding: 60px 0 60px;
+                border-bottom: #191919 solid 1px;
+                gap: 20px;
+            }
+            
+            .services > div:nth-child(1){
+                border-right: 1px solid black;
+            }
+
+            .services_list .list {
+                gap:20px
+            }
+
+            .services_list .list > div:nth-child(1){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .services_list .list > div:nth-child(2) p:last-of-type{
+                font-size: 18px;
+            }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1020px) {
 
-   
-       
+        .services_list{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .services_list .list{
+            display: grid;
+            border-bottom: none;
+            padding-bottom: 40px;
+        }
+
+        .qualification > div:nth-child(2){
+            display: flex;
+            flex-direction: row;    
+            /* justify-content: space-around; */
+            gap: 20px;
+            /* grid-template-columns: 1fr 4fr; */
+       }
+    
+    
+
 
 }
 
 @media screen and (min-width:1200px) {
+
+    header{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    main{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
     
     .intro {
-        padding: 80px 0 80px;
+        padding: 60px 0 60px;
         /* overflow: scroll; */
     }
 
     .intro div:nth-child(1) p{
         font-size: 24px;
    }
-   
+
+   .qualification > div:nth-child(2){
+    display: flex;
+    flex-direction: row;    
+    /* gap: 0; */
 }
+
+}
+
+ @media screen and (min-width:1450px) {
+    .qualify > div:nth-child(1){
+        margin: 0 10px 0 10px; 
+    }
+       
+
+} 
