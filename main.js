@@ -30,9 +30,9 @@ window.addEventListener("load", ()=>{
         var isClickInsideMenu = navItems.contains(event.target);
         var isClickInsideButton = toggle_open.contains(event.target);
     
-        if (!isClickInsideMenu && !isClickInsideButton) {
-            navItems.classList.toggle('menu_open')
-            navItems.classList.toggle('menu_close')
+        if (!isClickInsideMenu && !isClickInsideButton &&  navItems.classList.contains('menu_open')) {
+             navItems.classList.toggle('menu_open')
+             navItems.classList.toggle('menu_close')
         }
       });
     
