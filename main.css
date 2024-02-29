@@ -50,6 +50,7 @@ header div:nth-child(1) a, header div:nth-child(2) a{
      color: #191919;
      text-transform: uppercase;
      text-decoration: none;
+     cursor: pointer;
 }
 
  header div:nth-child(1){
@@ -83,6 +84,8 @@ header div:nth-child(2) a{
 header div:nth-child(2) a:last-of-type{
     border-bottom: none;
 }
+
+
 
 /* Mobile view menu */
 
