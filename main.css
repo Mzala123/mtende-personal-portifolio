@@ -15,7 +15,7 @@ html {
 }
 
 body{
-    background-color: #fdfbf5;
+    background-color: white;
     color: #191919;
 }
 
@@ -36,7 +36,7 @@ header{
     margin-left: 40px;
     margin-right: 40px;
     height: 10vh;
-    background-color: #fdfbf5;
+    background-color: white;
     align-items: center;
     border-bottom: 1px solid #191919;
     position: fixed;
@@ -90,7 +90,7 @@ header div:nth-child(2) a:last-of-type{
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: #fdfbf5;
+    background-color: white;
     top: 10vh;
     height: 280px;
     width: 100%;
@@ -279,7 +279,7 @@ main{
 .qualification > div:nth-child(2) >div:nth-child(1) span{
     font-size: 80px; 
     font-weight: lighter;
-    margin-left: -14px;
+    /* margin-left: -10px; */
 }
 
 .qualification > div:nth-child(2) >div:nth-child(2) p:first-of-type{
@@ -323,7 +323,7 @@ main{
 
 .services_list .list > div:nth-child(1) span{
     font-size: 80px;
-    margin-left: -14px;
+    /* margin-left: -12px; */
     font-weight: lighter;
 }
 
@@ -335,23 +335,137 @@ main{
 }
 
 
+.skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0 40px;
+    border-bottom: 1px solid #191919;
+}
+
+
+.skills > div:nth-child(1){
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 300;
+}
+
+.skills > div:nth-child(2){
+     display: grid;
+}
+
+.skills > div:nth-child(2) >div:nth-child(1) span{
+    font-size: 80px; 
+    font-weight: lighter;
+ 
+}
+
+.skills > div:nth-child(2) >div:nth-child(2) p:first-of-type{
+    font-family: 'myFont';
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.skills > div:nth-child(2) >div:nth-child(2) ol{
+    padding-left: 0;
+    /* background-color: #378fe9;*/
+} 
+
+.skills > div:nth-child(2) >div:nth-child(2) ol li{
+    list-style: inside;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.skills > div:nth-child(2) > div:nth-child(2) ol li:before {
+    content: counter(list-item, armenian) ""; 
+    display: inline-flex;
+    justify-content: center;
+    width: 1.5em; 
+    border: 1px solid #000; 
+    border-radius: 100px; 
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 10px; 
+}
+
+
+.contacts{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0 40px;
+    /* border-bottom: 1px solid #191919; */
+}
+
+.contacts > div:nth-child(1){
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 300;
+}
+
+
+.contacts_list {
+    display: grid;
+    gap: 40px;
+}
+
+.contacts_list .list{
+    display: grid;
+    border-bottom: 1px solid #191919;
+    padding-bottom: 40px;
+}
+
+.contacts_list .list > div:nth-child(1) span{
+    font-size: 80px;
+    /* margin-left: -12px; */
+    font-weight: lighter;
+}
+
+.contacts_list .list > div:nth-child(2) p:first-of-type{
+    font-family: 'myFont';
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+
+.contacts_list .list > div:nth-child(2) p:last-of-type a{
+    text-decoration: none;
+    color: #0a66c2;
+
+    font-weight: bold;
+}
+
+.contacts_list .list > div:nth-child(2) p:last-of-type a:hover{
+     color: #378fe9;
+     border-bottom: 1.5px solid #378fe9;
+}
+
 
 
 @media screen and (min-width:500px) {
       
     .qualification > div:nth-child(2){
-        /* display: flex;
-        flex-direction: row;    
-        justify-content: space-between;
-        gap: 25px; */
         grid-template-columns: 1fr 4fr;
-   }
-
+    }
 
    
    .services_list .list{
       grid-template-columns: 1fr 4fr;
    }  
+
+   .contacts_list .list{
+    grid-template-columns: 1fr 4fr;
+   }  
+
+   .skills > div:nth-child(2){
+    grid-template-columns: 1fr 4fr;
+}
+
 
 
 
@@ -378,7 +492,7 @@ main{
                 display: flex !important;
                 flex-direction: row;
                 position: relative;
-                background-color: #fdfbf5;
+                background-color: white;
                 top: 0;
                 height: auto;
                 width: auto;
@@ -491,15 +605,36 @@ main{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }   
+
+            /* Skills */
+
+            .skills{
+                grid-template-columns: 2fr 4fr;
+                padding: 60px 0 60px;
+                gap: 20px;
             }
 
+            .skills > div:nth-child(1){
+               border-right: 1px solid black;
+            }
 
-            .qualification > div:nth-child(2){
-                /* display: grid; */
-                /* grid-template-columns: 1fr 5fr; */
-           }
+            .skills > div:nth-child(2) >div:nth-child(2) ol{
+                font-size: 18px;
+            }
 
-        
+            .skill_list{
+                gap: 20px;
+            }
+
+            .skill_list >div:nth-child(1){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }   
+            /* end of skills */
+            
+            
 
             .services{
                 grid-template-columns: 2fr 4fr;
@@ -526,9 +661,45 @@ main{
             .services_list .list > div:nth-child(2) p:last-of-type{
                 font-size: 18px;
             }
+
+
+
+            .contacts{
+                grid-template-columns: 2fr 4fr;
+                padding: 60px 0 60px;
+                border-bottom: #191919 solid 1px;
+                gap: 20px;
+            }
+            
+            .contacts > div:nth-child(1){
+                border-right: 1px solid black;
+            }
+
+            .contacts_list .list {
+                gap:20px
+            }
+
+            .contacts_list .list > div:nth-child(1){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .contacts_list .list > div:nth-child(2) p:last-of-type{
+                font-size: 18px;
+            }
+
 }
 
 @media screen and (min-width:1020px) {
+
+        .qualification > div:nth-child(2){
+                display: flex;
+                flex-direction: row;    
+                gap: 20px;
+        }
+
 
         .services_list{
             grid-template-columns: 1fr 1fr;
@@ -540,18 +711,29 @@ main{
             padding-bottom: 40px;
         }
 
-        .qualification > div:nth-child(2){
+
+        .skills > div:nth-child(2){
             display: flex;
             flex-direction: row;    
-            /* justify-content: space-around; */
             gap: 20px;
-            /* grid-template-columns: 1fr 4fr; */
-       }
-    
-    
+         }
+        
+        .contacts_list{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contacts_list .list{
+            display: grid;
+            border-bottom: none;
+            padding-bottom: 40px;
+        }
 
 
+     
 }
+
+
+
 
 @media screen and (min-width:1200px) {
 
@@ -567,7 +749,6 @@ main{
     
     .intro {
         padding: 60px 0 60px;
-        /* overflow: scroll; */
     }
 
     .intro div:nth-child(1) p{
@@ -577,14 +758,19 @@ main{
    .qualification > div:nth-child(2){
     display: flex;
     flex-direction: row;    
-    /* gap: 0; */
-}
+   }
+
+
 
 }
 
  @media screen and (min-width:1450px) {
     .qualify > div:nth-child(1){
-        margin: 0 10px 0 10px; 
+        margin: 0 4px 0 4px; 
+    }
+
+    .skill_list > div:nth-child(1){
+        margin: 0 4px 0 4px; 
     }
        
 
