@@ -66,12 +66,12 @@ header div:nth-child(1) a{
     font-size: 30px;
 }
 
-header div:nth-child(1) span{
+header div:nth-child(1) svg{
     font-weight: 200;
     font-size: 36px;
 }
 
-header div:nth-child(1) span:hover{
+header div:nth-child(1) svg:hover{
     cursor: pointer;
 }
 
