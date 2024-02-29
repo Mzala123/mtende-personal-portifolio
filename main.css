@@ -21,11 +21,12 @@ body{
 
 .page_wrapper{
      /* border: 1px solid #191919; */
-     position: absolute;
-     height: 100vh;
+     /* position: absolute; */
+     /* height: 100vh;
      z-index: 100;
-     /* padding-left: 40px;
+     padding-left: 40px;
      padding-right: 40px; */
+     /* margin-bottom: 40px; */
 }
 
 
@@ -253,6 +254,7 @@ main{
     border-radius: 16px;
     object-fit: cover;
     width: 100%;    
+    border: 1px solid black;
 }
 
 .qualification{
@@ -382,7 +384,7 @@ main{
     margin-bottom: 20px;
 }
 
-.skills > div:nth-child(2) > div:nth-child(2) ol li:before {
+/* .skills > div:nth-child(2) > div:nth-child(2) ol li:before {
     content: counter(list-item, armenian) ""; 
     display: inline-flex;
     justify-content: center;
@@ -392,7 +394,7 @@ main{
     padding-top: 1px;
     padding-bottom: 1px;
     margin-right: 10px; 
-}
+} */
 
 
 .contacts{
